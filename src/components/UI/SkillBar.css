@@ -1,0 +1,53 @@
+/* ========================================
+   SkillBar Component Styles
+   ======================================== */
+
+.skill-bar {
+  margin-bottom: 1rem;
+  background: rgba(18, 18, 26, 0.6);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-bar:hover {
+  transform: translateX(5px);
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.15);
+}
+
+/* Header row: name + level */
+.skill-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.skill-bar__label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #f8fafc;
+}
+
+.skill-bar__icon {
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.skill-bar__percentage {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #a855f7;
+  letter-spacing: 0.05em;
+  background: rgba(124, 58, 237, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}

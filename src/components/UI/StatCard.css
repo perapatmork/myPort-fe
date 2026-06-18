@@ -1,0 +1,78 @@
+/* ========================================
+   StatCard Component Styles
+   ======================================== */
+
+.stat-card {
+  background: rgba(18, 18, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.stat-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.2),
+    0 0 40px rgba(124, 58, 237, 0.1);
+}
+
+/* Icon */
+.stat-card__icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Value */
+.stat-card__value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a855f7, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+/* Suffix */
+.stat-card__suffix {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a855f7, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Label */
+.stat-card__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-card__value,
+  .stat-card__suffix {
+    font-size: 2rem;
+  }
+}
