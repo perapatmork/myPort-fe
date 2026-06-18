@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/roblox-universes/(.*)", "destination": "https://apis.roblox.com/$1" },
+    { "source": "/api/roblox-games/(.*)", "destination": "https://games.roblox.com/$1" },
+    { "source": "/api/roblox-thumbnails/(.*)", "destination": "https://thumbnails.roblox.com/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
