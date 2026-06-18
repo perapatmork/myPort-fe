@@ -1,0 +1,143 @@
+/* ==============================
+   Pricing Page
+   ============================== */
+
+.pricing-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+/* --- Pricing Grid --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.pricing-grid__item--highlighted {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* --- Note --- */
+.pricing-note {
+  text-align: center;
+  color: #64748b;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* --- CTA Section --- */
+.pricing-cta {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: rgba(18, 18, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c3aed,
+    transparent
+  );
+}
+
+.pricing-cta__content {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-cta__title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #f8fafc;
+  margin: 0 0 0.75rem;
+}
+
+.pricing-cta__text {
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.pricing-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #f8fafc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-cta__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
+}
+
+.pricing-cta__arrow {
+  transition: transform 0.3s ease;
+}
+
+.pricing-cta__button:hover .pricing-cta__arrow {
+  transform: translateX(4px);
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-grid__item--highlighted {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-page {
+    padding-top: 5rem;
+  }
+
+  .pricing-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .pricing-cta__title {
+    font-size: 1.2rem;
+  }
+}

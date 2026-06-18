@@ -1,0 +1,194 @@
+/* ==============================
+   Games Page
+   ============================== */
+
+.games-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+/* --- Summary Stats Bar --- */
+.games-summary {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.games-summary__pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: rgba(18, 18, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.games-summary__pill:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.games-summary__label {
+  color: #64748b;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.games-summary__value {
+  color: #a855f7;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.games-summary__value--cyan {
+  color: #22d3ee;
+}
+
+.games-summary__value--green {
+  color: #22c55e;
+}
+
+/* --- Games Grid --- */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* --- Loading State --- */
+.games-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  gap: 1.5rem;
+}
+
+.games-loading__text {
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* --- Error State --- */
+.games-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+  background: rgba(18, 18, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.games-error__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.games-error__title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color: #f43f5e;
+  margin: 0 0 0.5rem;
+}
+
+.games-error__text {
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  max-width: 400px;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.games-error__retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.games-error__retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
+}
+
+/* --- Refresh Note --- */
+.games-refresh-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.games-refresh-note__icon {
+  font-size: 1rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 768px) {
+  .games-page {
+    padding-top: 5rem;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .games-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .games-summary__pill {
+    width: 100%;
+    max-width: 280px;
+    justify-content: space-between;
+  }
+}
